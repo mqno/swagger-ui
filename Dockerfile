@@ -22,7 +22,7 @@ COPY --chown=nginx:nginx --chmod=0666 ./docker/default.conf.template ./docker/co
 COPY --chmod=0666 ./dist/* /usr/share/nginx/html/
 COPY --chmod=0555 ./docker/docker-entrypoint.d/ /docker-entrypoint.d/
 COPY --chmod=0666 ./docker/configurator /usr/share/nginx/configurator
-COPY --chmod=0666 ./dev-helpers/apidocs/public-api.yaml /user/share/nginx/html/
+COPY --chmod=0777 ./dev-helpers/apidocs/public-api.yaml /user/share/nginx/html/
 
 # Simulates running NGINX as a non root; in future we want to use nginxinc/nginx-unprivileged.
 # In future we will have separate unpriviledged images tagged as v5.1.2-unprivileged.
