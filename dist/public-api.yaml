@@ -22661,6 +22661,25 @@ paths:
                               - ffa
                               - 'league '
                             type: string
+                          info:
+                            anyOf:
+                              -
+                                type: object
+                                properties:
+                                  points:
+                                    type: object
+                                    properties:
+                                      pointsPerKill:
+                                        type: integer
+                                      pointsPerPlacement:
+                                        type: array
+                                        items:
+                                          type: object
+                                          properties:
+                                            points:
+                                              type: integer
+                                            placement:
+                                              type: integer
                       encounterWSChannel:
                         type: string
                         example: encounter-01h5sq9pf7dce8ym2wty9yqkxb
